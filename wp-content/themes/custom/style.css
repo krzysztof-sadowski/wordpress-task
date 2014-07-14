@@ -1,0 +1,48 @@
+/*
+Theme Name: Custom Theme
+*/
+body {
+    margin-bottom: 20px;
+}
+
+#site-header-row {
+    margin-bottom: 21px;
+    position: relative;
+}
+
+#site-header-row > .col-md-2.hidden-xs {
+    padding-left: 6px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+}
+
+#site-header-row > .col-md-2.hidden-xs > .btn-block {
+    margin: 0;
+    height: 50%;
+}
+
+#sidebar-home-top-col > div > a > img {
+    /* Bootstrap: .img-responsive */
+    display: block;
+    width: 100% \9;
+    max-width: 100%;
+    height: auto;
+    
+    /* Bootstrap: .center-block */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#sidebar-home-top-col > div {
+    margin-bottom: 21px;
+}
+
+#sidebar-home-top-col > div > .alert {
+    margin-bottom: 0;
+}
+
+.alert > h3 {
+    margin-top: 0;
+}
