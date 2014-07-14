@@ -21,17 +21,31 @@
                     </a>
                 </div>
                 <div class="col-md-2 hidden-xs hidden-sm">
-                    <button type="button" class="btn btn-primary btn-lg btn-block">login<br>logout</button>
-                    <button type="button" class="btn btn-default btn-lg btn-block">register<br>viewprofile</button>
+                    <?php if(is_user_logged_in()) : ?>
+                        <button type="button" class="btn btn-primary btn-lg btn-block">Wyloguj</button>
+                        <button type="button" class="btn btn-default btn-lg btn-block">Mój profil</button>
+                    <?php else : ?>
+                        <button type="button" class="btn btn-primary btn-lg btn-block">Zaloguj</button>
+                        <button type="button" class="btn btn-default btn-lg btn-block">Rejestracja</button>
+                    <?php endif; ?>
                 </div>
                 <div class="col-md-2 hidden-md hidden-lg">
                     <div class="btn-group btn-group-justified">
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-primary btn-lg btn-block">login<br>logout</button>
-                        </div>
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-default btn-lg btn-block">register<br>viewprofile</button>
-                        </div>
+                        <?php if(is_user_logged_in()) : ?>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-primary btn-lg btn-block">Wyloguj</button>
+                            </div>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default btn-lg btn-block">Mój profil</button>
+                            </div>
+                        <?php else : ?>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-primary btn-lg btn-block">Zaloguj</button>
+                            </div>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default btn-lg btn-block">Rejestracja</button>
+                            </div>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
