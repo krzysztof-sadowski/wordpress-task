@@ -17,12 +17,19 @@ body {
     right: 0;
 }
 
-#site-header-row > .col-md-2.hidden-xs > .btn-block {
-    margin: 0;
+#site-header-row > .hidden-xs > a {
+    display: block;
     height: 50%;
+    text-decoration: none;
 }
 
-#sidebar-home-top-col > div > a > img {
+#site-header-row > .hidden-xs > a > .btn-block {
+    height: 100%;
+    margin: 0;
+}
+
+#sidebar-home-top-col > div > a > img,
+#sidebar-user-profile-top-col > div > a > img {
     /* Bootstrap: .img-responsive */
     display: block;
     width: 100% \9;
@@ -45,4 +52,57 @@ body {
 
 .alert > h3 {
     margin-top: 0;
+}
+
+.custom-pagination {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.custom-post-pagination {
+    margin-top: 20px;
+}
+
+.btn-spaced {
+    margin: 15px;
+}
+
+.post-meta {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.post-expiration-date,
+.post-date {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.post-tags {
+    margin-bottom: 8px;
+}
+
+form#commentform > p.form-submit {
+    text-align: center;
+}
+#comment {
+    display: block;
+    width: 100%;
+}
+div.comment-body > div.zaki_like_dislike_box {
+    float: right;
+    border: none;
+}
+
+#piereg_pie_form_heading,
+#piereg_pie_form_desc {
+    text-align: center;
+}
+div.piereg_login_wrapper #user_login,
+div.piereg_login_wrapper #user_pass {
+    width: 100%;
+}
+table#pie_register.pie_profile > td.fields.fields2 {
+    width: 30%
 }
