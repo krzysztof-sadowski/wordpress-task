@@ -6,7 +6,7 @@ include_once(get_template_directory() . '/inc/template-tags-front-end-posting.ph
  * @param Boolean $showMoreLink
  * @param Array $options
  */
-function custom_mostpopular_list($wp_query, $showMoreLink = true, $options = []) {
+function custom_mostpopular_list($wp_query, $showMoreLink = true, $options = array()) {
     if( ! function_exists('wpp_get_mostpopular')) {
         return;
     }
@@ -19,7 +19,7 @@ function custom_mostpopular_list($wp_query, $showMoreLink = true, $options = [])
         }
     }
     
-    $defaultOptions = [
+    $defaultOptions = array(
         'header' => 'Najpopularniejsze',
         'header_start' => '<h2>',
         'header_end' => $header_end,
@@ -31,7 +31,7 @@ function custom_mostpopular_list($wp_query, $showMoreLink = true, $options = [])
         'wpp_start' => '<div class="list-group">',
         'wpp_end' => '</div>',
         'post_html' => '<a href="{url}" class="list-group-item">{text_title}</a>'
-    ];
+    );
     
     $options = array_merge($defaultOptions, $options);
 
@@ -43,7 +43,7 @@ function custom_pagination($wp_query) {
     $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
     
     $markerNumber = 999999999;
-    echo paginate_links([
+    echo paginate_links(array(
         'base'         => str_replace($markerNumber, '%#%', esc_url(get_pagenum_link($markerNumber))),
 	'format'       => '%#%',
 	'total'        => $wp_query->max_num_pages,
@@ -51,7 +51,7 @@ function custom_pagination($wp_query) {
 	'prev_text'    => '«',
 	'next_text'    => '»',
 	'type'         => 'plain',
-    ]);
+    ));
 }
 
 function custom_get_page_permalink($slug) {

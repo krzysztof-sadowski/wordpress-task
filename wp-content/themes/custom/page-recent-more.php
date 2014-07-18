@@ -3,11 +3,11 @@ defined('ABSPATH') or die('No script kiddies please!');
 
 get_template_part('index-base', 'top');
 
-$recent_query = new WP_Query([
+$recent_query = new WP_Query(array(
     'orderby' => 'date',
     'order' => 'DESC',
     'paged' => (get_query_var('paged')) ? get_query_var('paged') : 1,
-]);
+));
 if($recent_query->have_posts()) :
     ?>
     <h2>Najnowsze - więcej</h2>

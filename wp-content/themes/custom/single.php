@@ -50,7 +50,7 @@ get_header(); ?>
                     </div>
                     <div class="custom-pagination custom-post-pagination">
                         <?php
-                            wp_link_pages([
+                            wp_link_pages(array(
                                 'before'           => '<div class="page-links"><span class="page-links-title">' . __( 'Strony:') . '</span>',
                                 'after'            => '</div>',
                                 'link_before'      => '<span>',
@@ -61,7 +61,7 @@ get_header(); ?>
                                 'previouspagelink' => '»',
                                 //'pagelink'         => '%',
                                 //'echo'             => 1
-                            ]);
+                            ));
                         ?>
                     </div>
                     <footer class="post-meta">

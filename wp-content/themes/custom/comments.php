@@ -21,11 +21,11 @@ if (post_password_required()) {
 
         <ol class="comment-list">
             <?php
-                wp_list_comments([
+                wp_list_comments(array(
                     'style'      => 'ol',
                     'short_ping' => true,
                     'avatar_size'=> 0,
-                ]);
+                ));
             ?>
         </ol>
 
@@ -49,7 +49,7 @@ if (post_password_required()) {
     <?php
         $user_profile_permalink = custom_get_page_permalink('profile');
     
-        comment_form([
+        comment_form(array(
             'title_reply'       => __('Napisz komentarz'),
             'title_reply_to'    => __('Odpowiedz na komentarz autorstwa %s'),
             'cancel_reply_link' => __('Anuluj'),
@@ -105,7 +105,7 @@ if (post_password_required()) {
                     '" size="30" /></p>'
                 )
             ),
-        ]);
+        ));
     ?>
 
 </div>

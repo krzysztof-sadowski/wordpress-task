@@ -228,14 +228,14 @@ function custom_fep_add_post() {
         
         if (count($error_array) == 0) {
 
-            $post_id = wp_insert_post([
+            $post_id = wp_insert_post(array(
                 'post_author'	=> $user_id,
                 'post_title'	=> $post_title,
                 'post_type'     => 'post',
                 'post_content'	=> $post_content,
                 'tags_input'	=> $tags,
                 'post_status'	=> 'publish'
-            ]);
+            ));
             
             add_post_meta($post_id, '_expiration-date', $post_expiration_date);
             add_post_meta($post_id, 'source', $post_source);
