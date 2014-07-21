@@ -25,7 +25,7 @@
                         <a href="<?php echo wp_logout_url() ?>">
                             <button type="button" class="btn btn-primary btn-lg btn-block">Wyloguj</button>
                         </a>
-                        <a href="<?php echo get_permalink(get_option('pie_register_2')['alternate_profilepage']); ?>">
+                        <a href="<?php echo get_permalink(custom_get_value(get_option('pie_register_2'), 'alternate_profilepage')); ?>">
                            <button type="button" class="btn btn-default btn-lg btn-block">Mój profil</button>
                         </a>
                     <?php else : ?>
@@ -45,7 +45,7 @@
                                    type="button" class="btn btn-primary btn-lg btn-block">Wyloguj</a>
                             </div>
                             <div class="btn-group">
-                                <a href="<?php echo get_permalink(get_option('pie_register_2')['alternate_profilepage']); ?>"
+                                <a href="<?php echo get_permalink(custom_get_value(get_option('pie_register_2'), 'alternate_profilepage')); ?>"
                                    type="button" class="btn btn-default btn-lg btn-block">Mój profil</a>
                             </div>
                         <?php else : ?>
